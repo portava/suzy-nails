@@ -174,7 +174,17 @@ h2{font-size:clamp(26px,4vw,36px);margin:0 0 8px;color:var(--brand-d)}
 .card[data-g]{cursor:pointer;transition:transform .15s,box-shadow .15s}
 .card[data-g]:hover,.card[data-g]:focus-visible{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.12);outline:none}
 .card .more{display:inline-block;margin-top:10px;color:var(--brand);font-weight:700;font-size:14px}
-body:not(.preview) .ph,body:not(.preview) .shots:not(:has(img)),body:not(.preview) figure:has(>.ph){display:none!important}
+body:not(.preview) .ph,body:not(.preview) figure:has(>.ph){display:none!important}
+.rcs{grid-auto-columns:min(82%,300px);align-items:stretch}
+.rc{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;margin:0}
+.rc img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.rb{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.rc .st{color:#f4b400;letter-spacing:2px;font-size:15px}
+.rc p{margin:6px 0 12px;font-size:14.5px;line-height:1.55;flex:1;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+.rc p.open{-webkit-line-clamp:unset}
+.rc .who{display:flex;align-items:center;gap:9px;font-size:14px}
+.rc .who i{width:30px;height:30px;border-radius:50%;color:#fff;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:14px;flex:none}
+.rc .g{margin-left:auto;font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 8px}
 .ph{border:2px dashed #c9b6a6;background:#f6eee6;color:var(--muted);border-radius:12px;display:grid;place-items:center;text-align:center;padding:16px;font-size:14px;min-height:200px}
 .ph span{display:block;font-size:30px;margin-bottom:6px}
 .lb{position:fixed;inset:0;z-index:40;background:rgba(15,8,4,.92);display:none;flex-direction:column;align-items:center;justify-content:center;padding:56px 12px 16px}
@@ -190,10 +200,6 @@ body:not(.preview) .ph,body:not(.preview) .shots:not(:has(img)),body:not(.previe
 .lb .thumbs i{flex:0 0 auto;width:52px;height:52px;border-radius:6px;background:#3a2a22 center/cover;border:2px solid transparent;cursor:pointer;display:grid;place-items:center;color:#d9cfc7;font-style:normal;font-size:18px}
 .lb .thumbs i.on{border-color:#fff}
 .deal .car{font-size:32px;min-width:62px;text-align:center}
-.shots{grid-auto-columns:min(82%,300px);align-items:start}
-.shots figure img{width:100%;height:min(480px,62vh);object-fit:contain;object-position:top;background:#fff;border:1px solid var(--line);border-radius:12px;cursor:zoom-in}
-.shots .ph{height:420px}
-.shots figcaption{top:auto;bottom:10px}
 .interior{display:grid;gap:10px;grid-template-columns:repeat(3,1fr)}@media(max-width:600px){.interior{grid-template-columns:1fr 1fr}}
 .interior img,.interior .ph{aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:12px;min-height:0}
 @media(max-width:600px){.lb .pv,.lb .nx{top:auto;bottom:14px}}
@@ -319,44 +325,33 @@ footer{background:var(--ink);color:#d9cfc7;padding:28px 0;font-size:14px;text-al
   <!-- ===== GOOGLE REVIEWS WIDGET: paste the code from Trustindex / Elfsight between these lines ===== -->
   <div class="widget"></div>
   <!-- ===== END WIDGET ===== -->
-  <!-- Review screenshots: replace each placeholder <div class="ph">…</div> with <img loading="lazy" src="images/reviews/xx.jpg" alt="Google review in …"> -->
-  <div class="carousel shots">
-    <figure data-r="0"><img src="images/reviews/review1.jpg" alt="Google review: full body massage, worth the price" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="1"><img src="images/reviews/review2.jpg" alt="Google review: Hello Kitty gel nails by Luna" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="2"><img src="images/reviews/review3.jpg" alt="Google review: very professional nail design by Lisa" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="3"><img src="images/reviews/review4.jpg" alt="Google review: lavender zodiac nail art, best in town" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="4"><img src="images/reviews/review5.jpg" alt="Google review: gel manicure and foot spa, friendly staff" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="5"><img src="images/reviews/review6.jpg" alt="Google review: gel extensions and foot massage, lovely staff" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="6"><img src="images/reviews/review7.jpg" alt="Google review: family of five, massage and nails" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="7"><img src="images/reviews/review8.jpg" alt="Google review: full body massage, speaks English and Korean" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="8"><img src="images/reviews/review9.jpg" alt="Google review: nails and pedicure, fair price, no waiting" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="9"><img src="images/reviews/review10.jpg" alt="Google review: cat eye gel nails by Vanni" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="10"><img src="images/reviews/review11.jpg" alt="Google review: nail extensions, fast and neat" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="11"><img src="images/reviews/review12.jpg" alt="Google review: pampered and cared for, 10/10" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="12"><img src="images/reviews/review13.jpg" alt="Google review: skilled and efficient mani pedi" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="13"><img src="images/reviews/review14.jpg" alt="Google review: great service, friendly staff and atmosphere" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="14"><img src="images/reviews/review15.jpg" alt="Google review: best nail spot, nails by Vanni" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="15"><img src="images/reviews/review16.jpg" alt="Google review: polite, kind masseuse" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="16"><img src="images/reviews/review17.jpg" alt="Google review: first manicure, design recreated by Zang" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="17"><img src="images/reviews/review18.jpg" alt="Google review: comfortable massage, good location" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="18"><img src="images/reviews/review19.jpg" alt="Google review: Yumi can do all designs" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="19"><img src="images/reviews/review20.jpg" alt="Google review: from the Philippines, never fails" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="20"><img src="images/reviews/review21.jpg" alt="Google review in Chinese and English: hair wash and leg massage, kind staff" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="21"><img src="images/reviews/review22.jpg" alt="Google review: whole-family salon, hair, nails and massage" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="22"><img src="images/reviews/review23.jpg" alt="Google review: ear cleaning, back and foot massage, very comfortable" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="23"><img src="images/reviews/review24.jpg" alt="Google review: amazing foot massage near Han Market" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="24"><img src="images/reviews/review25.jpg" alt="Google review: detailed nail art by Lisa, clean salon" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure data-r="25"><img src="images/reviews/review26.jpg" alt="Google review: perfectionist nail extensions by Rieun" loading="lazy"><figcaption>★★★★★ Google</figcaption></figure>
-    <figure><div class="ph"><div><span>🇰🇷</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇰🇷 Korean</figcaption></figure>
-    <figure><div class="ph"><div><span>🇯🇵</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇯🇵 Japanese</figcaption></figure>
-    <figure><div class="ph"><div><span>🇨🇳</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇨🇳 Chinese</figcaption></figure>
-    <figure><div class="ph"><div><span>🇺🇸</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇺🇸 English</figcaption></figure>
-    <figure><div class="ph"><div><span>🇻🇳</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇻🇳 Tiếng Việt</figcaption></figure>
-    <figure><div class="ph"><div><span>🇷🇺</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇷🇺 Русский</figcaption></figure>
-    <figure><div class="ph"><div><span>🇫🇷</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇫🇷 Français</figcaption></figure>
-    <figure><div class="ph"><div><span>🇩🇪</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇩🇪 Deutsch</figcaption></figure>
-    <figure><div class="ph"><div><span>🇦🇺</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇦🇺 English (AU)</figcaption></figure>
-    <figure><div class="ph"><div><span>🇹🇼</span><b data-i="ph_review">评价截图即将上传</b></div></div><figcaption>🇹🇼 繁體中文</figcaption></figure>
+  <div class="carousel rcs">
+    <article class="rc"><img loading="lazy" src="images/reviews/4ec67f47.webp" alt="Photo from Hazem H.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>First time here. Great service for the full body massage. Worth the price. It's cheaper than other places.</p><div class="who"><i style="background:#5c6bc0">H</i><b>Hazem H.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/0180e8a3.webp" alt="Photo from Mimi N.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Luna at Suzy Nails did the cutest job on my Hello Kitty nails—I'm obsessed! 💕 She took her time, was super gentle, and made sure everything was perfect without rushing.</p><div class="who"><i style="background:#d81b60">M</i><b>Mimi N.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/84e2fbe4.webp" alt="Photo from Audrina L.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Very professional. Lisa took a long time to meticulously do the design I want. Worth the cost. Did pedicure too.</p><div class="who"><i style="background:#00897b">A</i><b>Audrina L.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/e265126f.webp" alt="Photo from Pauline C.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>The nail techs are so great at nail art! Best in town!! Love my libra season nails.</p><div class="who"><i style="background:#6d4c41">P</i><b>Pauline C.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/753fbab4.webp" alt="Photo from Iris A.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Mini did my gel manicure and Matcha did my foot spa. They were friendly and nice. I was very satisfied with the service, it was worth it. Thank you!</p><div class="who"><i style="background:#7cb342">I</i><b>Iris A.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/2a9291a7.webp" alt="Photo from Taia H.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Came here for gel nails with extensions and ended up coming back for a foot massage with gel polish the next day. The staff are all so lovely. The staff were able to give me exactly what I wanted for both! Gorgeous color options! Very happy with the results. Definitely recommend this spot and would come again!</p><div class="who"><i style="background:#8e24aa">T</i><b>Taia H.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/93b72ca8.webp" alt="Photo from Ori J.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>My family of 5 had a good experience here. 3 of us did a 40-min relaxing massage, much needed after a long day walk. My 2 girls did their nails 💅 and they were very satisfied 😊</p><div class="who"><i style="background:#f4511e">O</i><b>Ori J.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><div class="rb"><div class="st">★★★★★</div><p>Highly recommended. Very friendly. Speaks English and Korean. I had the full body massage. Just ask for someone strong if you like a high pressure massage. Been back 3 times and counting.</p><div class="who"><i style="background:#3949ab">C</i><b>Cung D.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/b4534aeb.webp" alt="Photo from Claire's Google review"><div class="rb"><div class="st">★★★★★</div><p>A great place to do your nails and pedicure, fair price and you don't need to wait. Their techniques are reliable. The experience is fast and sweet!</p><div class="who"><i style="background:#5c6bc0">C</i><b>Claire</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/fe6714aa.webp" alt="Photo from Kelly's Google review"><div class="rb"><div class="st">★★★★★</div><p>Amazing service!! Vanni was highly skillful and really detailed and attentive, each step was carried out with so much care ✨ Thank you so much, it's my first time doing cat eye nails and I love the result! Really affordable and worth it as well.</p><div class="who"><i style="background:#d81b60">K</i><b>Kelly</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/327ef593.webp" alt="Photo from Bolorzul G.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Service was fast and neat! Very friendly cute staff! Thank you 🍓🫐❤️❤️</p><div class="who"><i style="background:#00897b">B</i><b>Bolorzul G.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/ed9aab42.webp" alt="Photo from Apaul P.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Very good service, we felt pampered and cared for! My wife is very happy with the nails and color. 10/10 we'll go back soon!</p><div class="who"><i style="background:#6d4c41">A</i><b>Apaul P.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><div class="rb"><div class="st">★★★★★</div><p>They really do deserve the 5 stars as they are really skilled and efficient with the mani pedi. I'm very satisfied with how my nails turned out — and yes, no additional fee for cat eye! It's all part of the basic nail package.</p><div class="who"><i style="background:#7cb342">R</i><b>Roxanne T.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/cc801286.webp" alt="Photo from Scott J.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Service was great! Everyone was very friendly and great atmosphere.</p><div class="who"><i style="background:#8e24aa">S</i><b>Scott J.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/4c2a81c3.webp" alt="Photo from Justin L.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>10/10 best nail spot!! Vanni did my nails and had me correct! Slay queen. They have AC to cool down.</p><div class="who"><i style="background:#f4511e">J</i><b>Justin L.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/8fd397e6.webp" alt="Photo from Ryan H.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>My masseuse was very good. Polite and very kind. I will come back here again for sure.</p><div class="who"><i style="background:#3949ab">R</i><b>Ryan H.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/c05a3344.webp" alt="Photo from Karen L.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>First time receiving a manicure and the technician Zang did a terrific job recreating based off an inspo picture. She put tons of care and thought into recreating the design with the materials available, would highly recommend :)</p><div class="who"><i style="background:#5c6bc0">K</i><b>Karen L.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/e9a4d774.webp" alt="Photo from Batima I.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>The massage was great. It was comfortable and pleasant. Very good service and location. A head massage includes a face and neck massage.</p><div class="who"><i style="background:#d81b60">B</i><b>Batima I.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/86121a24.webp" alt="Photo from Eibhleann A.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>I absolutely love this place, they killed it every time! Yumi is the best and they can do literally all designs. So talented.</p><div class="who"><i style="background:#00897b">E</i><b>Eibhleann A.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/0a70a86a.webp" alt="Photo from Mary Love E.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>I'm from the Philippines and every time we visit Vietnam I always try their nail spas because they're good at it. And this salon once again never fails me and reached my expectations.</p><div class="who"><i style="background:#6d4c41">M</i><b>Mary Love E.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><div class="rb"><div class="st">★★★★★</div><p>非常細心又仔細，推薦大家一定要來。 I had a wonderful experience with the Vietnamese hair wash and leg massage. After I left, I realized I had forgotten my phone, and the lovely staff member actually ran out to return it to me. I was truly touched by her kindness and thoughtfulness. I will definitely come back again.</p><div class="who"><i style="background:#7cb342">王</i><b>王小珠</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/75c10b61.webp" alt="Photo from Jess H.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Very happy with my nails and the service, they are very kind and a place for the whole family to have treatments. From hair to nails to massages they offer all of it. Highly recommend, thank you 🙏🙏</p><div class="who"><i style="background:#8e24aa">J</i><b>Jess H.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><div class="rb"><div class="st">★★★★★</div><p>I had a really good experience. I did ear cleaning, a back massage and a foot massage, and everything was very comfortable and well done. The ear cleaning was especially comfortable and clean. For the back and foot massage, she adjusted the pressure according to what I was comfortable with, which made the whole experience very relaxing. Would definitely come back again!</p><div class="who"><i style="background:#f4511e">A</i><b>Amos Y.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><div class="rb"><div class="st">★★★★★</div><p>Amazing foot massage near the Han Market... affordable prices... Lady Ponni doing a great job!!</p><div class="who"><i style="background:#3949ab">L</i><b>Luka P.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/cbb6a8ac.webp" alt="Photo from Linh T.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Lisa was so detailed and took her time to make sure my nails came out perfect! Love them! Will definitely come back again! The salon was clean and professional. All the ladies were so kind!</p><div class="who"><i style="background:#5c6bc0">L</i><b>Linh T.</b><span class="g">Google</span></div></div></article>
+    <article class="rc"><img loading="lazy" src="images/reviews/15515b0a.webp" alt="Photo from Minnie N.'s Google review"><div class="rb"><div class="st">★★★★★</div><p>Rieun did an amazing job. Such a perfectionist and did my nails to the highest standard. Thank you so much!!! So happy with them.</p><div class="who"><i style="background:#d81b60">M</i><b>Minnie N.</b><span class="g">Google</span></div></div></article>
   </div>
   <a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/kn7EjaDZ1heai2TW9" data-i="rv_btn">在谷歌上查看全部评价</a>
 </div></section>
@@ -531,7 +526,6 @@ const GALLERIES={
  shampoo:{t:"c_sham",items:[{img:"images/barber.jpg"},{ph:"photo"},{ph:"video"}]},
  shaving:{t:"c_shave",items:[{img:"images/shave.jpg"},{img:"images/barber.jpg"},{ph:"video"}]},
  facial:{t:"c_face",items:[{img:"images/salon.jpg"},{ph:"photo"},{ph:"photo"},{ph:"video"}]},
- reviews:{t:"rv_title",items:Array.from({length:26},(_,i)=>i+1).map(i=>({img:"images/reviews/review"+i+".jpg"}))},
  body:{t:"c_body",items:[{img:"images/massage.jpg"},{ph:"photo"},{ph:"video"}]}};
 let LANG="en",lbG=null,lbI=0;
 const lb=document.getElementById("lb");
@@ -545,7 +539,7 @@ function lbOpen(k){lbG=GALLERIES[k];if(!PREVIEW)lbG={...lbG,items:lbG.items.filt
  lb.classList.add("on");document.body.style.overflow="hidden";lbShow(0)}
 function lbClose(){lb.classList.remove("on");lbS.innerHTML="";document.body.style.overflow=""}
 document.querySelectorAll(".card[data-g]").forEach(c=>{c.onclick=()=>lbOpen(c.dataset.g);c.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();lbOpen(c.dataset.g)}}});
-document.querySelectorAll(".shots figure[data-r]").forEach(f=>f.onclick=()=>{lbOpen("reviews");lbShow(+f.dataset.r)});
+document.querySelectorAll(".rc p").forEach(p=>p.onclick=()=>p.classList.toggle("open"));
 lbX.onclick=lbClose;lbP.onclick=()=>lbShow(lbI-1);lbN.onclick=()=>lbShow(lbI+1);lb.onclick=e=>{if(e.target===lb)lbClose()};
 document.addEventListener("keydown",e=>{if(!lb.classList.contains("on"))return;if(e.key==="Escape")lbClose();if(e.key==="ArrowLeft")lbShow(lbI-1);if(e.key==="ArrowRight")lbShow(lbI+1)});
 let tx=0;lb.addEventListener("touchstart",e=>tx=e.touches[0].clientX,{passive:true});lb.addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)lbShow(lbI+(d<0?1:-1))});
