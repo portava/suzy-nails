@@ -147,10 +147,8 @@ h2{font-size:clamp(26px,4vw,36px);margin:0 0 8px;color:var(--brand-d)}
 .rating{display:flex;align-items:center;gap:8px;margin-bottom:16px}.rating .big{font-size:32px;font-weight:700}.rating .stars{color:#f4b400;font-size:20px}
 .review .who{display:flex;gap:10px;align-items:center}.review .who img{width:36px;height:36px;border-radius:50%}.review small{display:block;color:var(--muted)}
 .review p{display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
-.vid{position:relative;overflow:hidden;background:#2b211c;line-height:0}
-.vid .blur{position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(30px) brightness(.6)}
-.vid .main{position:relative;display:block;margin:0 auto;width:100%;height:auto}
-@media(min-aspect-ratio:2/3){.vid .main{width:auto;height:100vh;height:100svh;max-width:100%}}
+.vid{background:#2b211c;line-height:0}
+.vid video{display:block;width:100%;height:auto}
 .deals{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .deal{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;gap:14px;align-items:center}
 .deal .pct{font-size:28px;font-weight:700;color:var(--brand);min-width:62px}
@@ -248,7 +246,7 @@ footer{background:var(--ink);color:#d9cfc7;padding:28px 0;font-size:14px;text-al
   <div class="wrap"><div class="dots" id="heroDots"></div></div>
 </div>
 
-<div class="vid"><video class="blur" src="video/salon.mp4" autoplay="" muted="" loop="" playsinline="" aria-hidden="true"></video><video class="main" src="video/salon.mp4" poster="video/poster.jpg" autoplay="" muted="" loop="" playsinline="" preload="auto"></video></div>
+<div class="vid"><video src="video/salon.mp4" poster="video/poster.jpg" autoplay="" muted="" loop="" playsinline="" preload="auto"></video></div>
 
 <section id="services"><div class="wrap">
   <h2 data-i="svc_title">Our services</h2><p class="sub" data-i="svc_sub">Relax in our cozy salon while our team takes care of you from head to toe.</p>
